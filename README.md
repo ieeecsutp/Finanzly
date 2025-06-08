@@ -18,3 +18,8 @@ Brindar una herramienta tanto educativa y funcional para todas las persona, sin 
 ## 👥 Colaboradores
 
 Este proyecto forma parte del equipo **IEEE CS UTP**, desarrollado por estudiantes interesados en el desarrollo web.
+
+## 🎨 Prototipo en Figma
+
+Puedes ver el diseño de este proyecto en Figma aquí:  
+👉 [Ver prototipo en Figma](https://www.figma.com/design/oh9hyUdm31Zd6NQGwmJJ1S/Finanzly?node-id=19-562&p=f&t=T4xFIjRvgQMgDkOU-0)
