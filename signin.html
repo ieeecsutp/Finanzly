@@ -2,20 +2,18 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Registro - 123 Digital</title>
+    <title>Registro - Finanzly</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
 </head>
+
 <body class="min-h-screen bg-blue-200">
 
     <!-- Contenedor principal con imagen de fondo -->
     <div class="min-h-screen flex items-center justify-center">
-        <!-- Overlay oscuro para mejorar legibilidad -->
-        <div class="absolute inset-0"></div>
         
         <!-- Contenedor del formulario -->
         <div class="register-container relative z-10 bg-white/90 backdrop-blur-sm rounded-xl shadow-2xl p-8 w-full max-w-md mx-4">
-            <h1 class="text-3xl font-bold text-center mb-2 text-gray-800">Registro de Usuario</h1>
+            <h1 class="text-3xl font-bold text-center text-gray-800">Registro de Usuario</h1>
             <p class="text-center mb-6 text-gray-600">Crea una cuenta para acceder a nuestros servicios</p> 
             
             <form action="RegisterServlet" method="POST" class="space-y-4">
@@ -48,8 +46,9 @@
                 </button>
             </form>
             
+            <!--Para conectar con la otra página-->
             <div class="login-link mt-4 text-center">
-                <p class="text-gray-600">¿Ya tienes cuenta? <a href="index.jsp" class="text-blue-600 hover:underline">Inicia sesión aquí</a></p>
+                <p class="text-gray-600">¿Ya tienes cuenta? <a href="login.html" class="text-blue-600 hover:underline">Inicia sesión aquí</a></p>
             </div>
         </div>
     </div>
