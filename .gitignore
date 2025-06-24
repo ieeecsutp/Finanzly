@@ -1,0 +1,19 @@
+# Excluir la carpeta 'hello-astro' específicamente
+hello-astro/
+
+# Archivos y carpetas comunes a ignorar (opcional pero recomendado)
+# --------------------------------------------
+# Dependencias
+node_modules/
+
+# Entornos y configuraciones
+.env
+.env.local
+.DS_Store
+dist/
+build/
+*.log
+
+# Editor/IDE
+.vscode/
+.idea/
