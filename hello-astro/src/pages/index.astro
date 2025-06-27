@@ -1,0 +1,128 @@
+---
+import Welcome from '../components/Welcome.astro';
+import Layout from '../layouts/Layout.astro';
+import './src/styles/global.css' 
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+	<body class="font-sans text-gray-800">
+  
+
+  <!-- Hero -->
+  <section style="background-color: #D1ECF1;" class="px-20">
+    <div class="grid md:grid-cols-2 items-center space-x-6">
+
+      <!-- Columna texto centrado -->
+      <div class="text-center">
+        <h1 class="text-7xl font-bold mb-4">Finanzly</h2>
+          <p class="text-4xl mb-4 text-gray-500">Ordena tus finanzas como un experto</p>
+          <button class="text-2xl bg-white border border-gray-300 px-6 py-2 rounded-lg hover:bg-gray-100 transition">
+            Descubre el rumbo →
+          </button>
+      </div>
+
+      <!-- Columna imagen -->
+      <div class="space-x-4">
+        <img src="imagenes/persona1.png" alt="Gráfico financiero" class="h-auto object-contain rounded-lg">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Regla 50-30-20 -->
+  <section class="p-8 h-auto mx-auto px-12 justify-between">
+    <div class="grid md:grid-cols-2 items-center">
+
+      <!-- Columna imagen -->
+      <div>
+        <img src="imagenes/fondo1.png" alt="Gráfico financiero" class="h-auto object-contain rounded-lg">
+      </div>
+
+      <!-- Columna texto centrado -->
+      <div class="px-10 space-y-6">
+        <h2 class="text-2xl px-8 py-2 text-center font-bold mb-4">Finanzly: tu guía para dominar tus finanzas con la regla 50-30-20</h2>
+        <p class="mb-4 px-5">Finanzly es un sitio web de educación financiera que te ayuda a desarrollar habilidades prácticas para manejar tu dinero y mejorar tu calidad de vida. Promovemos la regla 50-30-20, una guía simple
+          para distribuir tus ingresos:</p>
+        <ul class="list-disc list-inside mb-4 text-left inline-block px-5">
+          <li>50% para necesidades básicas.</li>
+          <li>30% para gustos y estilo de vida.</li>
+          <li>20% para ahorro y deudas.</li>
+        </ul>
+          <p class="px-5">Con Finanzly, aprenderás a aplicar esta y otras estrategias para tener el control de tus finanzas y alcanzar
+          tus metas.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section style="background-color: #D1ECF1;" class="p-8">
+    <h2 class="text-2xl font-bold mb-6 text-center">Blog</h2>
+    <div class="space-y-6 max-w-5xl mx-auto">
+
+      <!-- Entrada 1 -->
+      <div class="bg-pink-100 p-4 rounded-lg shadow flex flex-col md:flex-row gap-4 items-center">
+        <img src="imagenes/blog1.jpeg" alt="Presupuesto" class="w-full md:w-40 h-40 rounded object-cover">
+        <div class="text-center md:text-left">
+          <h3 class="font-bold text-lg mb-2">1. Cómo crear un presupuesto efectivo y fácil de seguir</h3>
+          <p class="text-sm text-gray-700">Aprende a organizar tus ingresos y gastos mensuales para tener un mejor
+            control de tu dinero y alcanzar tus metas financieras.</p>
+          <button class="mt-3 bg-yellow-200 hover:bg-yellow-300 px-4 py-2 rounded">Leer más</button>
+        </div>
+      </div>
+
+      <!-- Entrada 2 -->
+      <div class="bg-pink-100 p-4 rounded-lg shadow flex flex-col md:flex-row gap-4 items-center">
+        <img src="imagenes/blog2.png" alt="Regla 50-30-20"
+          class="w-full md:w-40 h-40 rounded object-cover order-last md:order-first">
+        <div class="text-center md:text-left">
+          <h3 class="font-bold text-lg mb-2">2. La regla 50-30-20: tu aliada para manejar el dinero</h3>
+          <p class="text-sm text-gray-700">Descubre cómo distribuir tus ingresos de forma sencilla para cubrir
+            necesidades, disfrutar y ahorrar sin complicaciones.</p>
+          <button class="mt-3 bg-yellow-200 hover:bg-yellow-300 px-4 py-2 rounded">Leer más</button>
+        </div>
+      </div>
+
+      <!-- Entrada 3 -->
+      <div class="bg-pink-100 p-4 rounded-lg shadow flex flex-col md:flex-row gap-4 items-center">
+        <img src="imagenes/blog3.jpeg" alt="Fondo de emergencia" class="w-full md:w-40 h-40 rounded object-cover">
+        <div class="text-center md:text-left">
+          <h3 class="font-bold text-lg mb-2">3. La importancia de un fondo de emergencia</h3>
+          <p class="text-sm text-gray-700">Conoce por qué ahorrar para imprevistos es clave para mantener tu estabilidad
+            financiera ante cualquier situación inesperada.</p>
+          <button class="mt-3 bg-yellow-200 hover:bg-yellow-300 px-4 py-2 rounded">Leer más</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Recursos Financieros -->
+  <section class="bg-blue-200 p-8">
+    <h2 class="text-xl font-semibold mb-6">Recursos Financieros</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white p-4 rounded shadow">
+        <div class="h-32 bg-gray-100 rounded mb-2"></div>
+        <h3 class="font-bold mb-1">Presupuesto mensual</h3>
+        <p class="text-sm text-gray-600">Una herramienta práctica que te ayuda a planificar y controlar tus ingresos y
+          gastos cada mes.</p>
+      </div>
+      <div class="bg-white p-4 rounded shadow">
+        <div class="h-32 bg-gray-100 rounded mb-2"></div>
+        <h3 class="font-bold mb-1">Calculadora de ahorro</h3>
+        <p class="text-sm text-gray-600">Esta calculadora te permite estimar cuánto dinero puedes ahorrar en un periodo
+          determinado.</p>
+      </div>
+      <div class="bg-white p-4 rounded shadow">
+        <div class="h-32 bg-gray-100 rounded mb-2"></div>
+        <h3 class="font-bold mb-1">Guía para salir de deudas</h3>
+        <p class="text-sm text-gray-600">Un manual paso a paso con estrategias para reducir y eliminar tus deudas.</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</Layout>
