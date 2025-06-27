@@ -1,0 +1,31 @@
+---
+import NavButton from './NavButton.astro';
+---
+
+<header class="bg-white shadow p-4 flex justify-between items-center">
+  <div class="text-xl font-bold">
+    <button 
+      onclick="window.location.href='index.html'" 
+      class="px-2 py-1 hover:opacity-80 transition"
+    >
+      💰Finanzly
+    </button>
+  </div>
+  <nav class="flex items-center space-x-3">
+    <a href="#" class="text-gray-700 hover:text-blue-600 px-2 py-1">Nosotros</a>
+    <a href="#" class="text-gray-700 hover:text-blue-600 px-2 py-1">Noticias</a>
+    <a href="#" class="text-gray-700 hover:text-blue-600 px-2 py-1">Blog</a>
+    <a href="#" class="text-gray-700 hover:text-blue-600 px-2 py-1">Contacto</a>
+    
+    <NavButton 
+      text="Iniciar Sesión" 
+      href="login.html" 
+      variant="outline" 
+    />
+    <NavButton 
+      text="Registrarse" 
+      href="signup.html" 
+      variant="solid" 
+    />
+  </nav>
+</header>
