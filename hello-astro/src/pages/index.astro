@@ -7,7 +7,6 @@ import './src/styles/global.css'
 ---
 
 <Layout>
-	<body class="font-sans text-gray-800">
   
 
   <!-- Hero -->
@@ -15,17 +14,18 @@ import './src/styles/global.css'
     <div class="grid md:grid-cols-2 items-center space-x-6">
 
       <!-- Columna texto centrado -->
-      <div class="text-center">
-        <h1 class="text-7xl font-bold mb-4">Finanzly</h2>
-          <p class="text-4xl mb-4 text-gray-500">Ordena tus finanzas como un experto</p>
-          <a href="#nosotros" class="inline-block text-2xl bg-white border border-gray-300 px-6 py-2 rounded-lg hover:bg-gray-100 transition">
-            Descubre el rumbo →
-          </a>
+      <div class="text-center px-4 md:px-20 py-10">
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-4">Finanzly</h1>
+        <p class="text-xl md:text-3xl lg:text-4xl mb-6 text-gray-500">Ordena tus finanzas como un experto</p>
+        <a href="#nosotros" class="inline-block text-sm sm:text-base md:text-xl bg-white border border-gray-300 px-4 sm:px-6 py-2 rounded-lg hover:bg-gray-100 transition">
+          Descubre el rumbo →
+        </a>
       </div>
+
 
       <!-- Columna imagen -->
       <div class="space-x-4">
-        <img src="imagenes/persona1.png" alt="Gráfico financiero" class="h-auto object-contain rounded-lg">
+<img src="/imagenes/persona1.png" alt="Gráfico financiero" class="w-full max-w-3xl h-auto object-contain rounded-lg mx-auto" loading="lazy" />
       </div>
     </div>
   </section>
@@ -37,7 +37,7 @@ import './src/styles/global.css'
 
       <!-- Columna imagen -->
       <div>
-        <img src="imagenes/fondo1.png" alt="Gráfico financiero" class="h-auto object-contain rounded-lg">
+<img src="/imagenes/fondo1.png" alt="Gráfico financiero" class="w-full max-w-2xl mx-auto h-auto object-contain rounded-lg" loading="lazy" />
       </div>
 
       <!-- Columna texto centrado -->
@@ -64,7 +64,7 @@ import './src/styles/global.css'
 
       <!-- Entrada 1 -->
       <div class="bg-pink-100 p-4 rounded-lg shadow flex flex-col md:flex-row gap-4 items-center">
-        <img src="/imagenes/blog1.jpeg" alt="Presupuesto" class="w-full md:w-40 h-40 rounded object-cover">
+<img src="/imagenes/blog1.jpeg" alt="Presupuesto" class="w-full md:w-40 h-40 object-cover rounded" loading="lazy" />
         <div class="text-center md:text-left">
           <h3 class="font-bold text-lg mb-2">1. Cómo crear un presupuesto efectivo y fácil de seguir</h3>
           <p class="text-sm text-gray-700">Aprende a organizar tus ingresos y gastos mensuales para tener un mejor
@@ -112,7 +112,7 @@ import './src/styles/global.css'
       
       <a href="/presupuesto" class="block bg-white p-4 rounded shadow hover:shadow-lg transition duration-200 ease-in-out">
         <div class="h-32 rounded mb-2 overflow-hidden flex items-center justify-center text-4xl text-green-500 font-bold">
-            <img src="/imagenes/presupuesto.png" alt="Icono de presupuesto mensual" class="w-full h-full object-cover">
+            <img src="/imagenes/presupuesto.png" alt="Icono de presupuesto mensual" class="w-full h-full object-cover" loading="lazy">
         </div>
         <h3 class="font-bold mb-1">Presupuesto mensual</h3>
         <p class="text-sm text-gray-600">Una herramienta práctica que te ayuda a planificar y controlar tus ingresos y
@@ -124,7 +124,7 @@ import './src/styles/global.css'
       <!-- Enlace a la Calculadora de Ahorro (ahora será una página Astro) -->
         <a href="/calculadora" class="block bg-white p-4 rounded shadow hover:shadow-lg transition duration-200 ease-in-out">
           <div class="h-32 bg-gray-100 rounded mb-2 flex items-center justify-center text-4xl text-blue-500 font-bold">
-               <img src="/imagenes/calculadora.png" alt="Icono de calculadora de ahorro" class="w-full h-full object-cover">
+               <img src="/imagenes/calculadora.png" alt="Icono de calculadora de ahorro" class="w-full h-full object-cover" loading="lazy">
           </div>
           <h3 class="font-bold mb-1">Calculadora de ahorro</h3>
           <p class="text-sm text-gray-600">Esta calculadora te permite estimar cuánto dinero puedes ahorrar en un periodo
@@ -136,7 +136,7 @@ import './src/styles/global.css'
 
       <a href="/deudas" class="block bg-white p-4 rounded shadow hover:shadow-lg transition duration-200 ease-in-out">
         <div class="h-32 rounded mb-2 overflow-hidden flex items-center justify-center text-4xl text-red-500 font-bold">
-             <img src="/imagenes/deudas.png" alt="Icono de guía para salir de deudas" class="w-full h-full object-cover">
+             <img src="/imagenes/deudas.png" alt="Icono de guía para salir de deudas" class="w-full h-full object-cover" loading="lazy">
         </div>
         <h3 class="font-bold mb-1">Guía para salir de deudas</h3>
         <p class="text-sm text-gray-600">Un manual paso a paso con estrategias para reducir y eliminar tus deudas.</p>
@@ -146,5 +146,4 @@ import './src/styles/global.css'
     </div>
   </section>
 
-</body>
 </Layout>

@@ -1,1 +1,9 @@
-@import "tailwindcss";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Oculta el cursor de texto en elementos que no sean campos editables */
+*:not(input):not(textarea):focus {
+  outline: none;
+  caret-color: transparent;
+}

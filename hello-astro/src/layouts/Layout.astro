@@ -4,13 +4,13 @@ import Footer from '../components/Footer.astro';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
+    <title>Finanzly</title>
 
     <style>
       html {
@@ -20,7 +20,6 @@ import Footer from '../components/Footer.astro';
     </style>
 
     <script>
-      // Desactiva el scroll automático por defecto del navegador
       if ("scrollRestoration" in history) {
         history.scrollRestoration = "manual";
       }
@@ -42,6 +41,13 @@ import Footer from '../components/Footer.astro';
           }
         } else {
           window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      });
+
+      window.addEventListener("hashchange", () => {
+        const el = document.querySelector(window.location.hash);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
         }
       });
     </script>
