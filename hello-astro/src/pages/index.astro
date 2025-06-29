@@ -103,12 +103,17 @@ import './src/styles/global.css'
   <section id="recursos" class="bg-blue-200 p-8">
     <h2 class="text-xl font-semibold mb-6">Recursos Financieros</h2>
     <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-white p-4 rounded shadow">
-        <div class="h-32 bg-gray-100 rounded mb-2"></div>
+      
+      <a href="/presupuesto" class="block bg-white p-4 rounded shadow hover:shadow-lg transition duration-200 ease-in-out">
+        <div class="h-32 rounded mb-2 overflow-hidden flex items-center justify-center text-4xl text-green-500 font-bold">
+            <img src="/imagenes/presupuesto.png" alt="Icono de presupuesto mensual" class="w-full h-full object-cover">
+        </div>
         <h3 class="font-bold mb-1">Presupuesto mensual</h3>
         <p class="text-sm text-gray-600">Una herramienta práctica que te ayuda a planificar y controlar tus ingresos y
           gastos cada mes.</p>
-      </div>
+        <p class="text-blue-600 text-sm mt-2">Ir al presupuesto →</p>
+      </a>
+
 
       <!-- Enlace a la Calculadora de Ahorro (ahora será una página Astro) -->
         <a href="/calculadora" class="block bg-white p-4 rounded shadow hover:shadow-lg transition duration-200 ease-in-out">
@@ -123,11 +128,15 @@ import './src/styles/global.css'
 
 
 
-      <div class="bg-white p-4 rounded shadow">
-        <div class="h-32 bg-gray-100 rounded mb-2"></div>
+      <a href="/deudas" class="block bg-white p-4 rounded shadow hover:shadow-lg transition duration-200 ease-in-out">
+        <div class="h-32 rounded mb-2 overflow-hidden flex items-center justify-center text-4xl text-red-500 font-bold">
+             <img src="/imagenes/deudas.png" alt="Icono de guía para salir de deudas" class="w-full h-full object-cover">
+        </div>
         <h3 class="font-bold mb-1">Guía para salir de deudas</h3>
         <p class="text-sm text-gray-600">Un manual paso a paso con estrategias para reducir y eliminar tus deudas.</p>
-      </div>
+        <p class="text-blue-600 text-sm mt-2">Ir a la guía →</p>
+      </a>
+
     </div>
   </section>
 
