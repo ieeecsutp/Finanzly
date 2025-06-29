@@ -5,6 +5,10 @@
 ## 🧠 Funcionalidades principales
 
 - Blog con consejos y buenas prácticas financieras
+- Calculadora de ahorro.
+- Guía para salir de deudas.
+- Aplicación de la regla 50-30-20 para manejo de finanzas.
+- Recursos financieros interactivos.
 
 ## 🚀 Objetivo del proyecto
 
@@ -12,12 +16,37 @@ Brindar una herramienta tanto educativa y funcional para todas las persona, sin 
 
 ## 📌 Tecnologías utilizadas
 
-- HTML5, CSS3 y JavaScript
-- Git y GitHub para control de versiones
+- Astro, TailWind, HTML5, CSS3 y JavaScript(ES6+).
+- Git y GitHub para control de versiones.
+- Figma para diseño y prototipado UI/UX.
+
+![image](https://github.com/user-attachments/assets/a6483748-c1fb-4063-8286-dcd8ceaadadb)
 
 ## 👥 Colaboradores
 
 Este proyecto forma parte del equipo **IEEE CS UTP**, desarrollado por estudiantes interesados en el desarrollo web.
+
+## ⚙️ Requisitos técnicos para ejecutar el proyecto
+
+Para trabajar o ejecutar localmente Finanzly necesitas tener instalado lo siguiente:
+
+- **Node.js** v18 o superior  
+  [Descargar Node.js](https://nodejs.org/en/download/)
+  
+- **npm** (viene con Node.js) o **yarn** para manejar paquetes
+
+- **Visual Studio Code** (o cualquier editor de código)  
+  [Descargar VS Code](https://code.visualstudio.com/)
+
+- **Extensión Tailwind CSS IntelliSense** para autocompletado y mejores ayudas en Tailwind  
+  (opcional pero recomendado)
+
+- Navegador moderno (Chrome, Firefox, Edge)
+
+- Inicia el servidor de desarrollo
+  npm run dev
+  
+- Abre http://localhost:3000 en tu navegador para ver la app.
 
 ## 🎨 Prototipo en Figma
 
