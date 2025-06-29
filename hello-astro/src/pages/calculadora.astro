@@ -1,0 +1,78 @@
+---
+import Layout from '../layouts/Layout.astro';
+import './src/styles/global.css' 
+
+// Para un scroll suave desde esta página si vuelves a la principal y un ancla
+// Puedes añadirlo en Layout.astro si quieres que sea global
+---
+
+<Layout title="Finanzly - Calculadora de Ahorro">
+  <!-- Si tu Layout.astro tiene el <body>, no lo repitas aquí.
+       El contenido se inserta directamente en el <slot /> del Layout. -->
+  <main class="font-sans text-gray-800 flex flex-col items-center justify-center min-h-screen bg-blue-100 p-4">
+    <div class="calculator-container bg-white p-10 rounded-lg shadow-lg max-w-md w-full">
+      <h2 class="text-3xl font-bold mb-6 text-center text-blue-800">Calculadora de Ahorro</h2>
+      <p class="text-gray-700 mb-6 text-center">¿cuánto dinero puedes ahorrar en un periodo determinado?</p>
+
+      <div class="space-y-4">
+        <div>
+          <label for="initialSaving" class="block text-sm font-medium text-gray-700">Ahorro Inicial (S/.):</label>
+          <input type="number" id="initialSaving" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500" value="0">
+        </div>
+        <div>
+          <label for="monthlyContribution" class="block text-sm font-medium text-gray-700">Aporte Mensual (S/.):</label>
+          <input type="number" id="monthlyContribution" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500" value="100">
+        </div>
+        <div>
+          <label for="interestRate" class="block text-sm font-medium text-gray-700">Tasa de Interés Anual (%):</label>
+          <input type="number" id="interestRate" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500" step="0.1" value="5">
+        </div>
+        <div>
+          <label for="periodMonths" class="block text-sm font-medium text-gray-700">Período (Meses):</label>
+          <input type="number" id="periodMonths" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500" value="12">
+        </div>
+      </div>
+
+      <button onclick="calculateSavings()" class="mt-6 w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+        Calcular Ahorro
+      </button>
+
+      <div class="mt-6 p-4 bg-blue-100 border border-blue-300 rounded-md text-center">
+        <h4 class="font-bold text-xl text-blue-800 mb-2">Total Ahorrado:</h4>
+        <p id="totalSavingsResult" class="text-3xl font-extrabold text-blue-900">S/0.00</p>
+      </div>
+
+      <div class="mt-6 text-center">
+        <a href="/#recursos" class="text-blue-600 hover:underline">← Volver a Recursos</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Script de JavaScript para la calculadora -->
+  <script is:inline>
+    function calculateSavings() {
+      const initialSaving = parseFloat(document.getElementById('initialSaving').value);
+      const monthlyContribution = parseFloat(document.getElementById('monthlyContribution').value);
+      const annualInterestRate = parseFloat(document.getElementById('interestRate').value);
+      const periodMonths = parseInt(document.getElementById('periodMonths').value, 10);
+
+      if (isNaN(initialSaving) || isNaN(monthlyContribution) || isNaN(annualInterestRate) || isNaN(periodMonths)) {
+        document.getElementById('totalSavingsResult').textContent = 'Por favor, ingrese valores válidos.';
+        return;
+      }
+
+      const monthlyInterestRate = (annualInterestRate / 100) / 12;
+      let totalSavings = initialSaving;
+
+      if (monthlyInterestRate > 0) {
+        // Cálculo del valor futuro de una serie de pagos (anualidad)
+        totalSavings = initialSaving * Math.pow((1 + monthlyInterestRate), periodMonths);
+        totalSavings += monthlyContribution * ((Math.pow((1 + monthlyInterestRate), periodMonths) - 1) / monthlyInterestRate);
+      } else { // Si la tasa de interés es 0
+        totalSavings = initialSaving + (monthlyContribution * periodMonths);
+      }
+
+      document.getElementById('totalSavingsResult').textContent = `S/${totalSavings.toFixed(2)}`;
+    }
+  </script>
+</Layout>

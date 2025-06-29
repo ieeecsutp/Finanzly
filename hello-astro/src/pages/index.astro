@@ -18,9 +18,9 @@ import './src/styles/global.css'
       <div class="text-center">
         <h1 class="text-7xl font-bold mb-4">Finanzly</h2>
           <p class="text-4xl mb-4 text-gray-500">Ordena tus finanzas como un experto</p>
-          <button class="text-2xl bg-white border border-gray-300 px-6 py-2 rounded-lg hover:bg-gray-100 transition">
+          <a href="#nosotros" class="inline-block text-2xl bg-white border border-gray-300 px-6 py-2 rounded-lg hover:bg-gray-100 transition">
             Descubre el rumbo →
-          </button>
+          </a>
       </div>
 
       <!-- Columna imagen -->
@@ -32,7 +32,7 @@ import './src/styles/global.css'
 
 
   <!-- Regla 50-30-20 -->
-  <section class="p-8 h-auto mx-auto px-12 justify-between">
+  <section id="nosotros" class="p-8 h-auto mx-auto px-12 justify-between">
     <div class="grid md:grid-cols-2 items-center">
 
       <!-- Columna imagen -->
@@ -58,7 +58,7 @@ import './src/styles/global.css'
   </section>
 
   <!-- Blog -->
-  <section style="background-color: #D1ECF1;" class="p-8">
+  <section id="blog" style="background-color: #D1ECF1;" class="p-8">
     <h2 class="text-2xl font-bold mb-6 text-center">Blog</h2>
     <div class="space-y-6 max-w-5xl mx-auto">
 
@@ -100,7 +100,7 @@ import './src/styles/global.css'
   </section>
 
   <!-- Recursos Financieros -->
-  <section class="bg-blue-200 p-8">
+  <section id="recursos" class="bg-blue-200 p-8">
     <h2 class="text-xl font-semibold mb-6">Recursos Financieros</h2>
     <div class="grid md:grid-cols-3 gap-6">
       <div class="bg-white p-4 rounded shadow">
@@ -109,12 +109,20 @@ import './src/styles/global.css'
         <p class="text-sm text-gray-600">Una herramienta práctica que te ayuda a planificar y controlar tus ingresos y
           gastos cada mes.</p>
       </div>
-      <div class="bg-white p-4 rounded shadow">
-        <div class="h-32 bg-gray-100 rounded mb-2"></div>
-        <h3 class="font-bold mb-1">Calculadora de ahorro</h3>
-        <p class="text-sm text-gray-600">Esta calculadora te permite estimar cuánto dinero puedes ahorrar en un periodo
-          determinado.</p>
-      </div>
+
+      <!-- Enlace a la Calculadora de Ahorro (ahora será una página Astro) -->
+        <a href="/calculadora" class="block bg-white p-4 rounded shadow hover:shadow-lg transition duration-200 ease-in-out">
+          <div class="h-32 bg-gray-100 rounded mb-2 flex items-center justify-center text-4xl text-blue-500 font-bold">
+               <img src="/imagenes/calculadora.png" alt="Icono de calculadora de ahorro" class="w-full h-full object-cover">
+          </div>
+          <h3 class="font-bold mb-1">Calculadora de ahorro</h3>
+          <p class="text-sm text-gray-600">Esta calculadora te permite estimar cuánto dinero puedes ahorrar en un periodo
+            determinado.</p>
+          <p class="text-blue-600 text-sm mt-2">Ir a la calculadora →</p>
+        </a>
+
+
+
       <div class="bg-white p-4 rounded shadow">
         <div class="h-32 bg-gray-100 rounded mb-2"></div>
         <h3 class="font-bold mb-1">Guía para salir de deudas</h3>
