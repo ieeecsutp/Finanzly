@@ -46,7 +46,7 @@ Para trabajar o ejecutar localmente Finanzly necesitas tener instalado lo siguie
 - Inicia el servidor de desarrollo
   npm run dev
   
-- Abre http://localhost:3000 en tu navegador para ver la app.
+- Abre http://localhost:4321 en tu navegador para ver la app.
 
 ## 🎨 Prototipo en Figma
 
