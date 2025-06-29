@@ -11,11 +11,39 @@ import Footer from '../components/Footer.astro';
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Astro Basics</title>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+        overflow-anchor: none;
+      }
+    </style>
+
+    <script>
+      // Desactiva el scroll automático por defecto del navegador
+      if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+      }
+    </script>
   </head>
 
   <body class="font-sans text-gray-800">
-    <Header />  <!-- Ahora el componente está importado -->
+    <Header />
     <slot />
-    <Footer />  <!-- Ahora el componente está importado -->
+    <Footer />
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const hash = window.location.hash;
+        if (hash) {
+          const el = document.querySelector(hash);
+          if (el) {
+            el.scrollIntoView({ behavior: "smooth" });
+          }
+        } else {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      });
+    </script>
   </body>
 </html>
